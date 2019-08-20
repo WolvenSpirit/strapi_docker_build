@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  node-c:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    env-file: cfg.env
+    network:
+      - mynet
+# ...
+      
+network:
+  mynet:

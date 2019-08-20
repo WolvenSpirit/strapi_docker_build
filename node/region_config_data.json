@@ -1,0 +1,43 @@
+{
+    "rules": {
+      "*/*": {
+        "endpoint": "o.auroraobjects.eu"
+      },
+      "cn-*/*": {
+        "endpoint": ""
+      },
+      "*/budgets": "globalSSL",
+      "*/cloudfront": "globalSSL",
+      "*/iam": "globalSSL",
+      "*/sts": "globalSSL",
+      "*/importexport": {
+        "endpoint": "",
+        "signatureVersion": "v2",
+        "globalEndpoint": true
+      },
+      "*/route53": {
+        "endpoint": "",
+        "signatureVersion": "v3https",
+        "globalEndpoint": true
+      },
+      "*/waf": "globalSSL",
+      "us-gov-*/iam": "globalGovCloud",
+      "us-gov-*/sts": {
+        "endpoint": ""
+      },
+      "*/sdb": {
+        "endpoint": "",
+        "signatureVersion": "v2"
+      }
+    },
+  
+    "patterns": {
+      "globalSSL": {
+        "endpoint": "",
+        "globalEndpoint": true
+      },
+      "globalGovCloud": {
+        "endpoint": ""
+      }
+    }
+  }
