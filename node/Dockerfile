@@ -3,8 +3,8 @@ RUN npm install strapi@beta -g
 RUN strapi new my-app --quickstart
 COPY hook.json my-app/config/hook.json
 WORKDIR /my-app
-ENV AWS_ACCESS_KEY_ID=Q3AM3UQ867SPQQA43P2F
-ENV AWS_SECRET_ACCESS_KEY=zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
+ENV AWS_ACCESS_KEY_ID=$
+ENV AWS_SECRET_ACCESS_KEY=$
 RUN npm i aws-sdk 
 RUN npm install
 RUN npm i strapi-provider-upload-aws-s3-custom-domain
